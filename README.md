@@ -4,7 +4,6 @@ A seguinte API tem como objetivo ser a aplicação intermediária para um site d
 
 # Como rodar a API
 * myapp\Scripts\Activate.ps1
-* cd graphql_example
 * uvicorn app:app --reload
 
 
