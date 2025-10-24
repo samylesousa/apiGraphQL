@@ -8,17 +8,14 @@ from sqlalchemy.future import select
 import random
 from datetime import datetime
 
-#tudo daqui pra baixo é pra popular o banco
-
 fake = Faker("pt_BR")
 
 # URL do banco de dados MySQL com asyncmy
-DATABASE_URL = "mysql+asyncmy://root:issoechatopracaralho@localhost:3306/dadosGerais"
+DATABASE_URL = "mysql+asyncmy://root:@localhost:3306/banco"
 engine = create_async_engine(DATABASE_URL, echo=True)
 SessionLocal = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
 
 #funções que são usadas durante a construção do banco de dados
-
 async def get_vertente(id: int, TableName):
     async with SessionLocal() as session:  #trabalha com uma instância da session
         query = select(TableName).where(TableName.id == id)
