@@ -2,10 +2,7 @@ import psutil
 import time
 import csv
 
-# Substitua pelos PIDs reais das suas APIs
 target_pids = [27420]
-
-# Opcional: dar um nome para cada PID
 pid_names = {
     27420: "API GraphQL"
 }
