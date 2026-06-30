@@ -11,7 +11,6 @@ from datetime import datetime
 fake = Faker("pt_BR")
 
 # URL do banco de dados MySQL com asyncmy
-DATABASE_URL = "mysql+asyncmy://root:@localhost:3306/banco"
 engine = create_async_engine(DATABASE_URL, echo=True)
 SessionLocal = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
 
